@@ -1,0 +1,42 @@
+<div class="container static">
+   <nav>
+      <ul class="nav nav-pills pull-right">
+        <li role="presentation"><a href="/">메인 페이지</a></li>
+        <% if user_signed_in? %>
+          <li role="presentation"><a href="/users/sign_out" data-method="delete">로그아웃</a></li>
+        <% else %>
+          <li role="presentation"><a href="/users/sign_in">로그인</a></li>
+          <li role="presentation"><a href="/users/sign_up">회원가입</a></li>
+        <% end %>
+      </ul>
+   </nav>
+   <h3 class="text-muted">RIAH PORTAL</h3>
+   
+   <div id="menu">
+      <nav>
+         <ul>
+            <li>
+               <a href="/posts/index">
+                  <span>Play RIAH</span>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <span>Class RIAH</span>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <span>Archive RIAH</span>
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <span>Back Channel</span>
+               </a>
+            </li>
+   
+         </ul>
+      </nav>
+   </div>
+</div>
