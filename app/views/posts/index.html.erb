@@ -5,17 +5,14 @@
 <h2>Listing posts</h2>
 
 <table class="table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Data actions</th>
-    </tr>
-  </thead>
-
   <tbody>
+    <%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
+        <td><%= post.content %></td>
+        <td><%= post.gako %></td>
+        <td><%= post.current_user.name %></td>
         <td>
           <%= link_to 'Show', post, class: 'btn btn-default' %>
           <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-default' %>
@@ -27,6 +24,6 @@
 </table>
 
 
-<%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>
+
 
 </div>
