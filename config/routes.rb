@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :posts
+  
+  resources :posts do
+    resources :comments, only: [:create, :destroy]
+  end
   devise_for :users
   match ":controller(/:action(/:id))", :via => [:post, :get]
   root :to => 'main#index'
