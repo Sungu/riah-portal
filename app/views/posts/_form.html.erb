@@ -5,7 +5,7 @@
     <%= f.input :title %>
     <%= f.input :content, input_html: { rows: 10 } %>
     <%= f.input :gako, input_html: { rows: 3 }%>
-    <%= f.input :dday, collection: 3..14%>
+    <%= f.input :dday, collection: 1..14, prompt: "모집 기한을 정해주세요!", selected: 3 %>
   </div>
 
   <div class="form-actions">

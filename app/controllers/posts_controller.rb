@@ -12,12 +12,15 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    
   end
 
   # GET /posts/new
   def new
     @post = Post.new
     @post.user_id=current_user.id
+    @post.gako = params[:gako]
+    @post.dday = params[:dday]
     @post.save
   end
 
@@ -30,6 +33,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id=current_user.id
+    @post.gako = params[:gako]
+    @post.dday = params[:dday]
     @post.save
 
     respond_to do |format|
@@ -75,6 +80,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content,:gako,:dday)
     end
 end

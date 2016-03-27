@@ -14,6 +14,28 @@
   <%= @post.content %>
 </p>
 
+<p>
+  <strong>Name:</strong>
+  <%= User.find(@post.user_id).name %>
+</p>
+
+<p>
+  <strong>각오:</strong>
+  <%= @post.gako %>
+</p>
+
+<p>
+  <strong>모집기한:</strong>
+  <%= @post.created_at+(@post.dday*86400) %>
+</p>
+
+<p>
+  <strong>지원현황:</strong>
+  
+</p>
+
+<%= link_to '지원하기','#', class: 'btn btn-default' %>
+
 <hr>
 
 <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-default' %>

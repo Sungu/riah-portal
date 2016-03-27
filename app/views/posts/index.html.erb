@@ -12,7 +12,7 @@
         <td><%= post.title %></td>
         <td><%= post.content %></td>
         <td><%= post.gako %></td>
-        <td><%= post.current_user.name %></td>
+        <td><%= User.find(post.user_id).name %></td>
         <td>
           <%= link_to 'Show', post, class: 'btn btn-default' %>
           <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-default' %>
