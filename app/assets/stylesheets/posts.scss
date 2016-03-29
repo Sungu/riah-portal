@@ -19,7 +19,7 @@ a {
    transition: all 0.3s ease 0s;
 }
 
-#menu {
+#post_menu {
    width: 1000px;
    height: 120px;
    margin: 22% 20% ;
@@ -30,18 +30,18 @@ a {
    position: absolute;
 }
 
-nav ul {
+#post_menu_ul {
    list-style: none;
    overflow: hidden;
    position: relative;
 }
 
-nav ul li {
+#post_menu_ul li {
    float: left;
    margin: 0 20px 0 0;
 }
 
-nav ul li a {
+#post_menu_ul li a {
    display: block;
    width: 120px;
    height: 120px;
@@ -50,31 +50,31 @@ nav ul li a {
    border-radius: 4px;
 }
 
-nav ul li:nth-child(1) a {
+#post_menu_ul li:nth-child(1) a {
    background-color: #5BB2FC;
    background-position: 28px 28px;
 }
 
-nav ul li:nth-child(2) a {
+#post_menu_ul li:nth-child(2) a {
    background-color: #58EBD3;
    background-position: 28px -96px;
 }
 
-nav ul li:nth-child(3) a {
+#post_menu_ul li:nth-child(3) a {
    background-color: #FFA659;
    background-position: 28px -222px;
 }
 
-nav ul li:nth-child(4) a {
+#post_menu_ul li:nth-child(4) a {
    background-color: #FF7A85;
    background-position: 28px -342px;
 }
 
-nav ul li:nth-child(1) a:hover, nav ul li:nth-child(2) a:hover, nav ul li:nth-child(3) a:hover, nav ul li:nth-child(4) a:hover {
+#post_menu_ul li:nth-child(1) a:hover, nav ul li:nth-child(2) a:hover, nav ul li:nth-child(3) a:hover, nav ul li:nth-child(4) a:hover {
    opacity: 0.8;
 }
 
-nav ul li a span {
+#post_menu_ul li a span {
    font: 50px "Dosis", sans-serif;
    text-transform: uppercase;
    position: absolute;
@@ -83,23 +83,23 @@ nav ul li a span {
    visibility: hidden;
 }
 
-nav ul li a:hover span {
+#post_menu_ul li a:hover span {
    visibility: visible;
 }
 
-nav ul li:nth-child(1) a span {
+#post_menu_ul li:nth-child(1) a span {
    color: #5BB2FC;
 }
 
-nav ul li:nth-child(2) a span {
+#post_menu_ul li:nth-child(2) a span {
    color: #58EBD3;
 }
 
-nav ul li:nth-child(3) a span {
+#post_menu_ul li:nth-child(3) a span {
    color: #FFA659;
 }
 
-nav ul li:nth-child(4) a span {
+#post_menu_ul li:nth-child(4) a span {
    color: #FF7A85;
 }
 
@@ -111,4 +111,125 @@ nav ul li:nth-child(4) a span {
    clear: center;
    position: relative;
    margin-top: 300px;
+}
+
+// 페이지 상단 네비게이터
+
+
+
+
+*{
+  -webkit-transition-timing-function: ease-out; /* Safari and Chrome */
+  transition-timing-function: ease-out;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #F2F2F2;
+  background-color: #41558C;
+}
+
+.toggleNav{
+  // border-bottom: 5px solid darken(#272b30, 15%);
+  background-color: #272b30;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+  
+  &:hover{
+  //  border-bottom: 5px solid darken(#54EFC9, 20%);
+  }
+}
+
+nav{
+  width: 100%;
+  min-height: 50px;
+}
+
+.toggleNavButton{
+  transition-duration: 0.5s;
+  width: 40px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  margin-left: -20px;
+  border-radius: 2px;
+  
+  &:before, &:after{
+    border-radius: 2px;
+    transition-duration: 0.5s;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    background-color: white;
+    width: 40px;
+    height: 2px;
+  }
+  
+  &:after{
+    top: 16px;
+  }
+  
+  &.active{
+    width: 0;
+    
+    &:after{
+      top: 8px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+    
+    &:before{
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+  }
+}
+
+#subnav{
+  width: 100%;
+  border-bottom: 0px solid darken(#F64870, 15%);
+  background-color: #272b30;
+  transition-duration: 0.2s;
+  overflow: hidden;
+  height: 0px;
+  
+  &.active{
+    // border-bottom: 5px solid darken(#272b30, 15%);
+    height: 50px;
+  }
+  
+  ul{
+    width: 615px;
+    margin: 0 auto;
+    
+    li{
+      transition-duration: 0.3s;
+      display: inline-block;
+      text-align: center;
+      width: 150px;
+      padding: 10px 0;
+      height: 50px;
+      
+      a{
+        color: white;
+      }a
+      
+      &:hover{
+        background-color: darken(#F64870, 15%);
+      }
+    }
+  }
 }
