@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20160327085949) do
   end
 
   add_index "applicants", ["post_id"], name: "index_applicants_on_post_id"
-  add_index "applicants", ["user_id"], name: "index_applicants_on_user_id", unique: true
 
   create_table "comments", force: :cascade do |t|
     t.integer  "post_id"

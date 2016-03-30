@@ -6,7 +6,6 @@ class CreateApplicants < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    
-    add_index :applicants, :user_id,                unique: true
+
   end
 end

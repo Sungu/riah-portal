@@ -1,10 +1,17 @@
 class ApplicantsController < ApplicationController
-  before_action :set_post
   before_action :set_applicant, only: :destroy
 
   def create
-    @applicant = @post.applicants.new(applicants_params)
-    @applicant.save
+    @post = Post.find(params[:post])
+    if @post.applicants.where(user_id: current_user.id).exists?
+      flash[:alert] = "이미 지원 신청 되었습니다!"
+      redirect_to :back
+    else
+      applicant = @post.applicants.new 
+      applicant.user_id = current_user.id
+      applicant.save
+      redirect_to :back
+    end
   end
 
   def destroy
@@ -12,10 +19,6 @@ class ApplicantsController < ApplicationController
   end
 
   private
-
-  def set_post
-    @post = Post.find(params[:post_id])
-  end
 
   def set_applicant
     @applicant = @post.applicants.find(params[:id])

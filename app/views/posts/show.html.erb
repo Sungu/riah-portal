@@ -35,7 +35,7 @@
   
 </p>
 
-<%= link_to '지원하기','#', class: 'btn btn-default' %>
+<%= link_to '지원하기',{:controller => "applicants", :action => "create", :post => @post.id }, class: 'btn btn-default' %>
 
 <hr>
 
