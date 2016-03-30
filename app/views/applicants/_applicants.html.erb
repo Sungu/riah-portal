@@ -1,0 +1,9 @@
+<ul id="applicants_list_<%=@post.id%>">
+<% if @post.applicants.size > 0 %>
+  <%= render @post.applicants %>
+<% else %>
+  <li>
+    지원자가 없습니다.
+  </li>
+<% end %>
+</ul>
