@@ -4,7 +4,7 @@ class ApplicantsController < ApplicationController
   def create
     @post = Post.find(params[:post])
     if @post.applicants.where(user_id: current_user.id).exists?
-      flash[:alert] = "이미 지원 신청 되었습니다!"
+      flash[:notice] = "이미 지원 신청 되었습니다!"
       redirect_to :back
     else
       applicant = @post.applicants.new 
