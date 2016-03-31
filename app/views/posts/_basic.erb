@@ -1,87 +1,42 @@
-<!DOCTYPE html>
-<html>
-   <head>
-   </head>
-</html>
-  <body>
-   <div class="container">
-      <div class="row">
-         <div class="col-lg-12">
-            <nav>
-               <div class="toggleNav">
-                  <div class="toggleNavButton"></div>
-               </div>
-               <div id="subnav">
-                     <ul>
-                       <center>
-                           <li role="presentation" id="nav_mainpage"><a href="/">메인 페이지</a></li>
-                           <% if user_signed_in? %>
-                           <li role="presentation" id="nav_logout"><a href="/users/sign_out" data-method="delete">로그아웃</a></li>
-                           <% else %>
-                           <li role="presentation" id="nav_login"><a href="/users/sign_in">로그인</a></li>
-                           <li role="presentation" id="nav_signin"><a href="/users/sign_up">회원가입</a></li>
-                       
-                        <% end %>
-                     </center>
-                  </ul>
-               </div>
-            </nav>
-         </div>
-      </div>
-   </div>
-   
-      <!--   <nav>
-        <div class="toggleNav">
-          <div class="toggleNavButton"></div>
-        </div>
-        
-        <div id="subnav">
-          <ul>
-            <li> <a href="#">Menu Item</a> </li>
-            <li> <a href="#">Menu Item</a> </li>
-            <li> <a href="#">Menu Item</a> </li>
-            <li> <a href="#">Menu Item</a> </li>
-          </ul>
-        </div>
-      </nav> -->
-         
-   
-   <div class="container">
-      <div id="post_menu">
-         <nav>
-            <ul id="post_menu_ul">
-               <li>
-                  <a href="/posts">
-                     <span>Play RIAH</span>
-                  </a>
-               </li>
-               <li>
-                  <a href="#">
-                     <span>Class RIAH</span>
-                  </a>
-               </li>
-               <li>
-                  <a href="#">
-                     <span>Archive RIAH</span>
-                  </a>
-               </li>
-               <li>
-                  <a href="#">
-                     <span>Back Channel</span>
-                  </a>
-               </li>
+<ul>
+   <center>
+      <li role="presentation" id="nav_mainpage"><a href="/">메인 페이지</a></li>
+         <% if user_signed_in? %>
+            <li role="presentation" id="nav_logout"><a href="/users/sign_out" data-method="delete">로그아웃</a></li>
+         <% else %>
+            <li role="presentation" id="nav_login"><a href="/users/sign_in">로그인</a></li>
+            <li role="presentation" id="nav_signin"><a href="/users/sign_up">회원가입</a></li>
+         <% end %>
+   </center>
+</ul>
+               
+<div id="post_menu">
+   <nav>
+      <ul id="post_menu_ul">
+         <li>
+            <a href="/posts">
+               <span>Play RIAH</span>
+            </a>
+         </li>
+         <li>
+            <a href="#">
+               <span>Class RIAH</span>
+            </a>
+         </li>
+         <li>
+            <a href="#">
+               <span>Archive RIAH</span>
+            </a>
+         </li>
+         <li>
+            <a href="#">
+               <span>Back Channel</span>
+            </a>
+         </li>
       
-            </ul>
-         </nav>
-      </div>
-   </div>
+      </ul>
+   </nav>
+</div>
    
-   <script>
-      $(".toggleNav").click(function () {
-      $("#subnav").toggleClass("active");
-      $(".toggleNavButton").toggleClass("active");
-      });
-   </script>
-      
-   </body>
+  
       
