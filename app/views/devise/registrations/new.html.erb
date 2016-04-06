@@ -16,7 +16,14 @@
 <% end %> -->
 
 <!-- 새로 추가한 회원가입 폼 -->
+
+
+
 <body style="background-color: #BFE8D8" class="login_main">
+  
+  
+  
+  
   <div class="container-fluid">
     <div class="form"style="margin-top:100px">
       <ul class="tab-group">
@@ -25,7 +32,7 @@
       </ul>
       <div id="signup">   
         <h1 style="margin:5,0,5,0" >Sign Up for play RIAH</h1>
-        <form action="/users" method="post">
+        <form action="/users" method="post" accept-charset="UTF-8" novalidate="novalidate">
           <div class="top-row">
        <!-- <div class="field-wrap">
               <label>
@@ -61,6 +68,7 @@
           </div>
           <p class="forgot"><a href="/users/password/new">Password: At Least 8 Char</a><a href="/posts" style="color:white"> /BACK</a></p>
           <button type="submit" name="commit" class="button button-block"/>Get Started</button>
+          
         </form>
       </div>
     </div> <!-- /form -->
