@@ -1,15 +1,11 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .static {
    float: center;
    position: relative;
 }
-.hello{
+.hello {
    clear: center;
    position: relative;
-   margin-top: 100px;
+   margin-top: 50px;
 }
 
 // post_main에 대한 수식
@@ -35,8 +31,8 @@
 
 }
 .toggleNav {
-  border-bottom: 5px solid #a0d8c2;
-  background-color: #aae7cf;
+  border-bottom: 1px solid #d5d5d5;
+  background-color: #e2e2e2;
   width: 100%;
   height: 50px;
   text-align: center;
@@ -46,7 +42,7 @@
   font-size: 30px;
 }
 .toggleNav:hover {
-  border-bottom: 5px solid #98cdb8;
+  border-bottom: 1px solid #b3b3b3;
 }
 .post_main nav {
   width: 100%;
@@ -99,7 +95,7 @@
   height: 0px;
 }
 #subnav.active {
-  border-bottom: 5px solid #e78383;
+  border-bottom: 0px solid #e78383;
   height: 50px;
 }
 #subnav ul {
@@ -260,6 +256,7 @@
 .login_main .field-wrap {
   position: relative;
   margin-bottom: 40px;
+  color: white;
 }
 
 .login_main .top-row:after {
@@ -301,7 +298,7 @@
 }
 
 .login_main .forgot {
-  margin-top: -20px;
+  margin-top: -10px;
   text-align: right;
 }
 
@@ -309,110 +306,85 @@
   height: 16px;
 }
 
-// comments
-
-.comments {
-  background-color: #f0f2fa;
-  font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  color: #555f77;
-  -webkit-font-smoothing: antialiased;
+.white {
+  color:#ffffff;
+  font-size:50px;
 }
 
-.comm input, textarea {
-  outline: none;
-  border: none;
-  display: block;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: 1rem;
-  color: #555f77;
-}
-.comm input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #ced2db;
-}
-.comm input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #ced2db;
-}
-.comm input:-moz-placeholder, textarea:-moz-placeholder {
-  color: #ced2db;
-}
-.comm input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #ced2db;
+.white01 {
+  color:#ffffff;
+  font-size:40px;
 }
 
-.comm p {
-  line-height: 1.3125rem;
+.hrcr {
+  color:#ffffff;
+  border:0;
+  background-color:#ffffff;
+  height:2px;
 }
 
-.comm .comments {
-  margin: 2.5rem auto 0;
-  max-width: 60.75rem;
-  padding: 0 1.25rem;
+
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
 }
 
-.comm .comment-wrap {
-  margin-bottom: 1.25rem;
-  display: table;
-  width: 100%;
-  min-height: 5.3125rem;
-}
-
-.comm .photo {
-  padding-top: 0.625rem;
-  display: table-cell;
-  width: 3.5rem;
-}
-.comm .photo .avatar {
-  height: 2.25rem;
-  width: 2.25rem;
-  border-radius: 50%;
-  background-size: contain;
-}
-
-.comm .comment-block {
-  padding: 1rem;
-  background-color: #fff;
-  display: table-cell;
-  vertical-align: top;
-  border-radius: 0.1875rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
-}
-.comm .comment-block textarea {
-  width: 100%;
-  resize: none;
-}
-
-.comm .comment-text {
-  margin-bottom: 1.25rem;
-}
-
-.comm .bottom-comment {
-  color: #acb4c2;
-  font-size: 0.875rem;
-}
-
-.comm .comment-date {
+.action-button
+{
+  text-decoration: none;	
+	position: relative;
+	padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
   float: left;
+	border-radius: 10px;
+	font-size: 25px;
+	color: #FFF;
+}
+.action-button-sm
+{
+  text-decoration: none;	
+	position: relative;
+	padding: 7px 30px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+	border-radius: 7px;
+	font-size: 18px;
+	color: #FFF;
 }
 
-.comm .comment-actions {
-  float: right;
+.blue
+{
+	background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	text-shadow: 0px -2px #2980B9;
 }
-.comm .comment-actions li {
-  display: inline;
-  margin: -2px;
-  cursor: pointer;
+
+.red
+{
+	background-color: #E74C3C;
+	border-bottom: 5px solid #BD3E31;
+	text-shadow: 0px -2px #BD3E31;
 }
-.comm comment-actions li.complain {
-  padding-right: 0.75rem;
-  border-right: 1px solid #e1e5eb;
+
+.green
+{
+	background-color: #82BF56;
+	border-bottom: 5px solid #669644;
+	text-shadow: 0px -2px #669644;
 }
-.comm .comment-actions li.reply {
-  padding-left: 0.75rem;
-  padding-right: 0.125rem;
+
+.yellow
+{
+	background-color: #F2CF66;
+	border-bottom: 5px solid #D1B358;
+	text-shadow: 0px -2px #D1B358;
 }
-.comm .comment-actions li:hover {
-  color: #0095ff;
+
+.action-button:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
 }

@@ -1,48 +1,39 @@
 <%= render 'basic' %>
-
-<div class="container hello">
-
-<h2>Post Preview</h2>
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= User.find(@post.user_id).name %>
-</p>
-
-<p>
-  <strong>각오:</strong>
-  <%= @post.gako %>
-</p>
-
-<p>
-  <strong>모집기한:</strong>
-  <%= @post.created_at+(@post.dday*86400) %>
-</p>
-
-<p>
-  <strong>지원현황:</strong>
-  <%= render "applicants/applicants" %>
+<div class="container">
   
-</p>
-
-<%= link_to '지원하기',{:controller => "applicants", :action => "create", :post => @post.id }, class: 'btn btn-default' %>
-
-<hr>
-
-<%= render "comments/comments" %>
-<% if current_user.id == @post.user_id %>
-  <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-default' %>
-<% end %>
-<%= link_to 'Back', posts_path, class: 'btn btn-default' %>
+    <h2>Post Preview</h2>
+      <p>
+      <strong>Title:</strong>
+      <%= @post.title %>
+      </p>
+      <p>
+      <strong>Content:</strong>
+      <%= @post.content %>
+      </p>
+      <p>
+      <strong>Name:</strong>
+      <%= User.find(@post.user_id).name %>
+      </p>
+      <p>
+      <strong>각오:</strong>
+      <%= @post.gako %>
+      </p>
+      <p>
+      <strong>모집기한:</strong>
+      <%= @post.created_at+(@post.dday*86400) %>
+      </p>
+      <p>
+      <strong>지원현황:</strong>
+      <%= render "applicants/applicants" %>
+      </p>
+      <%= link_to '지원하기',{:controller => "applicants", :action => "create", :post => @post.id }, class: 'btn btn-default' %>
+      <hr>  
+      <%= render "comments/comments" %>
+      <% if current_user.id == @post.user_id %>
+      <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-default' %>
+      <% end %>
+      <%= link_to 'Back', posts_path, class: 'btn btn-default' %>
+      <div style="margin-bottom:50px;">
+    </div>
 
 </div>

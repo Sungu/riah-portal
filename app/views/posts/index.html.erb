@@ -1,29 +1,39 @@
 <%= render 'basic' %>
-<div class="container hello">
-  <% if user_signed_in? %>
-    <h2>Listing posts</h2>
-    <table class="table">
-      <tbody> 
-        <%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>
-        <% @posts.each do |post| %>
-          <tr>
-            <td><%= post.title %></td>
-            <td><%= post.content %></td>
-            <td><%= post.gako %></td>
-            <td><%= User.find(post.user_id).name %></td>
-            <td>
-              <%= link_to 'Show', post, class: 'btn btn-default' %>
-              <% if current_user.id == post.user_id %>
-                <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-default' %>
-                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %>
-              <% end %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  <% else %>
-    <h1>로그인 해주세요!</h1>
-  <% end %>
-  
+  <div class="container">
+    <div class="row" style="margin-top:50px; margin-bottom:50px;">
+      <div class="col-lg-12">
+        <h1 class="white">play RIAH에 오신걸 환영합니다</h1>
+        <% if user_signed_in? %> 
+        <p class="white01">재미있는 프로젝트가 떠올랐나요?</p>
+        <a href="/posts/new" class="action-button shadow animate yellow">LET US PLAY!</a>
+      </div>
+    </div>
+    <hr class="hrcr">
+    <div id="posting">
+    <% @posts.each do |post| %>
+      <div class="row">
+        <div class="col-md-7">
+          <a href="#">
+            <img class="img-responsive" src="http://lupe.co.kr/wp/wp-content/uploads/2013/09/1378109304db3c2-580x580.jpg" alt="">
+          </a>
+        </div>
+      <div class="col-md-5" class="option">
+        <h3><%= post.title %></h3>
+        <h4><%= User.find(post.user_id).name %></h4>
+        <p><%= post.content %></p>      
+         
+          <%= link_to 'Show', post, class: 'action-button-sm shadow animate blue' %>
+          <% if current_user.id == post.user_id %>
+          <%= link_to 'Edit', edit_post_path(post), class: 'action-button-sm shadow animate red' %>   
+          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'action-button-sm shadow animate green' %>
+          <% end %>
+                
+      </div>
+      </div>
+    <hr class="hrcr">
+    <% end %>
+    <% else %>
+      <h2 class="white01" style="margin-botton:50px;">로그인을 해주세요</h2>
+    <% end %>
+  </div>
 </div>
