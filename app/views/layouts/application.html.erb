@@ -11,21 +11,16 @@
   <link rel="stylesheet" href="https://bootswatch.com/slate/bootstrap.min.css">
   
   </head>
-  <body style="background-color: #BFE8D8">
-    <div class="container-fluid">
+  
       <%= render partial: "shared/flash_messages", flash: flash %>
   
-        <%= yield %>
+      <%= yield %>
   
-    </div>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     
-    
-    
-    <script> 
-    
+  <script> 
     // 상단 네비게이터
     
     $(".toggleNav").click(function () {
@@ -33,7 +28,7 @@
     $(".toggleNavButton").toggleClass("active");
     });
     
-    <!-- 로그인 / 회원가입 -->
+    // 로그인 / 회원가입 
     
     $('.form').find('input, textarea').on('keyup blur focus', function (e) {
       var $this = $(this),
@@ -42,6 +37,7 @@
   			if ($this.val() === '') {
             label.removeClass('active highlight');
           } else {
+            
             label.addClass('active highlight');
           }
         } else if (e.type === 'blur') {
@@ -58,16 +54,8 @@
   		    label.addClass('highlight');
   			}
       }
-
     });
-
-    
-        
-    
-    </script>
-    
-    
-  </body>
+  </script>
 </html>
 
 

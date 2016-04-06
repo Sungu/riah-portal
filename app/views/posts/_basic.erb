@@ -1,24 +1,29 @@
-<div class="row">
-	<nav>
-	  <div class="toggleNav">
-	    <div class="toggleNavButton"></div>
-	  </div>
-	  
-	  <div id="subnav">
-	    <ul>
-	      <center>
-	      	<li role="presentation" id="nav_mainpage"><a href="/">Main Page</a></li>
-					<% if user_signed_in? %>
-						<li role="presentation" id="nav_logout"><a href="/users/sign_out" data-method="delete">Log Out</a></li>
-					<% else %>
-						<li role="presentation" id="nav_login"><a href="/users/sign_in">Log In</a></li>
-						<li role="presentation" id="nav_signin"><a href="/users/sign_up">Sign Up</a></li>
-					<% end %>
-				</center>
-	    </ul>
-	  </div>
-	</nav>
-</div>
+<body style="background-color: #BFE8D8" class="posts_main">
+    <div class="container-fluid">
+		<div class="row">
+			<nav class="upper_nav">
+				<div class="toggleNav">
+			    	<div class="toggleNavButton">
+			    	</div>
+				</div>
+				<div id="subnav">
+			    	<ul>
+			    		<center>
+			      			<li role="presentation" id="nav_mainpage"><a href="/">Main Page</a>
+			      			</li>
+								<% if user_signed_in? %>
+									<li role="presentation" id="nav_logout"><a href="/users/sign_out" data-method="delete">Log Out</a></li>
+								<% else %>
+					  		<li role="presentation" id="nav_login"><a href="/users/sign_in">Log In</a></li>
+							<li role="presentation" id="nav_signin"><a href="/users/sign_up">Sign Up</a></li>
+								<% end %>
+						</center>
+			   		</ul>
+			    </div>
+			</nav>
+		</div>
+	</div>
+<body>
 
 
 	

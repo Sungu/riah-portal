@@ -1,26 +1,59 @@
 <%= render 'basic' %>
-
 <div class="container hello">
-
-<h2>Listing posts</h2>
-
-<table class="table">
-  <tbody> 
-    <%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= post.gako %></td>
-        <td><%= User.find(post.user_id).name %></td>
-        <td>
-          <%= link_to 'Show', post, class: 'btn btn-default' %>
-          <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-default' %>
-          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+  <h2>Listing posts</h2>
+  <table class="table">
+    <tbody> 
+      <%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.title %></td>
+          <td><%= post.content %></td>
+          <td><%= post.gako %></td>
+          <td><%= User.find(post.user_id).name %></td>
+          <td>
+            <%= link_to 'Show', post, class: 'btn btn-default' %>
+            <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-default' %>
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
+
+<section class="postbox">
+  <div id="icon-wrapper">
+    
+    <a href="/posts/new">
+      <div class="icons">
+        <div class="icon-slide-container">
+          <img class="slide-icon"  alt="New Play" height="100" src="http://thekitemap.com/images/slide/add-beach.jpg">
+        </div>
+      </div>
+    </a>
+    
+    <a href="kite-map.php">
+      <div class="icons2">
+        <div class="icon-slide-container">
+          <img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/view-map.jpg">
+        </div>
+      </div>
+    </a>
+      
+    <a href="location.php">
+       <div class="icons3">
+        <div class="icon-slide-container">
+          <img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/view-all.jpg">
+        </div>
+      </div>
+     </a>
+        
+    <a href="feedback.html">
+      <div class="icons4">
+        <div class="icon-slide-container">
+          <img class="slide-icon"  alt="The Kite Map Logo" height="100" src="http://thekitemap.com/images/slide/feedback.jpg">
+        </div>
+        </div>
+      </a>
+	</div>
+</section>
