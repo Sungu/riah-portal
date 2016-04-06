@@ -4,6 +4,7 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :name, required: true, autofocus: true %>
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>
@@ -24,7 +25,7 @@
       </ul>
       <div id="signup">   
         <h1 style="margin:5,0,5,0" >Sign Up for play RIAH</h1>
-        <form action="/users/sign_in" method="post">
+        <form action="/users" method="post">
           <div class="top-row">
        <!-- <div class="field-wrap">
               <label>
@@ -34,6 +35,14 @@
             </div> -->
           </div>
         </div>
+          <div class="field-wrap">
+            <label>
+              Name<span class="req">*</span>
+            </label>
+            <input type="name" name="user[name]" required autocomplete="off"/>
+          </div>
+          <div class="margin">
+          </div>
           <div class="field-wrap">
             <label>
               Email Address<span class="req">*</span>
