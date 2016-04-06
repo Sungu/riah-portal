@@ -1,77 +1,42 @@
-<!-- <h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :name, required: true, autofocus: true %>
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %> -->
-
-<!-- 새로 추가한 회원가입 폼 -->
-
-
-
 <body style="background-color: #BFE8D8" class="login_main">
-  
-  
-  
-  
   <div class="container-fluid">
-    <div class="form"style="margin-top:100px">
+    <div class="form"style="margin-top: 50px">
       <ul class="tab-group">
-        <li class="tab"><a href="/users/sign_in">Log In</a></li>
+        <li class="tab"><a href="/users/sign_in" type="post">Log In</a></li>
         <li class="tab active"><a href="">Sign Up</a></li>
       </ul>
       <div id="signup">   
         <h1 style="margin:5,0,5,0" >Sign Up for play RIAH</h1>
-        <form action="/users" method="post" accept-charset="UTF-8" novalidate="novalidate">
-          <div class="top-row">
-       <!-- <div class="field-wrap">
-              <label>
-                Name<span class="req">*</span>
-              </label>
-              <input type="text" name="user[email]" required autocomplete="off" />
-            </div> -->
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+          <div class="field-wrap">
+            <label>
+            </label>
+            <%= f.input :name, required: true, autofocus: true %>
           </div>
+          <div class="field-wrap">
+            <label>
+            </label>
+            <%= f.input :email, required: true, autofocus: true %>
+          </div>
+          <div class="field-wrap">
+            <label>
+            </label>
+            <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+          </div>
+          <div class="field-wrap">
+            <label>
+            </label>
+            <%= f.input :password_confirmation, required: true %>
+          </div>
+          <p class="forgot"><a href="/users/password/new">Forgot Password</a></p>
+          <div class="button button-block">
+            <%= f.button :submit, "Sign up" %>
+          </div>
+            <% end %>
         </div>
-          <div class="field-wrap">
-            <label>
-              Name<span class="req">*</span>
-            </label>
-            <input type="name" name="user[name]" required autocomplete="off"/>
-          </div>
-          <div class="margin">
-          </div>
-          <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email" name="user[email]" required autocomplete="off"/>
-          </div>
-          <div class="margin">
-          </div>
-          <div class="field-wrap">
-            <label>
-              Set A Password<span class="req">*</span>
-            </label>
-            <input type="password" name="user[password]" required autocomplete="off"/>
-          </div>
-          <div class="margin">
-          </div>
-          <p class="forgot"><a href="/users/password/new">Password: At Least 8 Char</a><a href="/posts" style="color:white"> /BACK</a></p>
-          <button type="submit" name="commit" class="button button-block"/>Get Started</button>
-          
-        </form>
       </div>
-    </div> <!-- /form -->
-    <!-- render "devise/shared/links" -->
+    </div>
   </div>
 </body>
+   

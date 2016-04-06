@@ -12,41 +12,43 @@
   </div>
 <% end %> -->
 
-<!-- 새로 추가한 로그인 폼 -->
 
-<body class="login_main" style="background-color: #BFE8D8">
+
+
+<body style="background-color: #BFE8D8" class="login_main">
   <div class="container-fluid">
-    <div class="form" style="margin-top:100px">
+    <div class="form"style="margin-top:50px">
       <ul class="tab-group">
         <li class="tab active"><a href="">Log In</a></li>
-        <li class="tab"><a href="/users/sign_up">Sign Up</a></li>
+        <li class="tab"><a href="/users/sign_up" type="post">Sign Up</a></li>
       </ul>
-      <div id="login">   
-        <h1 style="margin:5,0,5,0">PLAY!</h1>
-          <form action="/users" method="post" accept-charset="UTF-8" novalidate="novalidate">
-            <div class="field-wrap">
-              <label>
-                Email Address<span class="req">*</span>
-              </label>
-              <input type="email" name="user[email]" required autocomplete="off"/>
-            </div>
-            <div class="margin">
-            </div>
-            <div class="field-wrap">
-              <label>
-                Password<span class="req">*</span>
-              </label>
-              <input type="password" name="user[password]" required autocomplete="off"/>
-            </div>
-            <div class="margin">
-            </div>
-            <p class="forgot"><a href="/users/password/new">Forgot Password?</a><a href="/posts" style="color:white"> /BACK</a></p>
-            <button class="button button-block" name="commit"/>Log In</button>
-          </form>
+      <div id="signup">   
+        <h1 style="margin:5,0,5,0" >Sign Up for play RIAH</h1>
+          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field-wrap">
+            <label>
+            </label>
+            <%= f.input :email, required: false, autofocus: true %>
+          </div>
+          <div class="field-wrap">
+            <label>
+            </label>
+            <%= f.input :password, required: false %>
+          </div>
+          <div class="field-wrap">
+            <label>
+            </label>
+            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+          </div>
+          <div class="button button-block">
+            <%= f.button :submit, "Log in" %>
+          </div>
+            <% end %>
         </div>
-      </div><!-- tab-content -->
-    </div> <!-- /form -->
-    <!-- render "devise/shared/links" -->
+      </div>
+    </div>
   </div>
 </body>
-        
+
+
+
