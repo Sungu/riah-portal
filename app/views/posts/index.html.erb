@@ -1,22 +1,29 @@
 <%= render 'basic' %>
 <div class="container hello">
-  <h2>Listing posts</h2>
-  <table class="table">
-    <tbody> 
-      <%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>
-      <% @posts.each do |post| %>
-        <tr>
-          <td><%= post.title %></td>
-          <td><%= post.content %></td>
-          <td><%= post.gako %></td>
-          <td><%= User.find(post.user_id).name %></td>
-          <td>
-            <%= link_to 'Show', post, class: 'btn btn-default' %>
-            <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-default' %>
-            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <% if user_signed_in? %>
+    <h2>Listing posts</h2>
+    <table class="table">
+      <tbody> 
+        <%= link_to 'New Post', new_post_path, class: 'btn btn-default' %>
+        <% @posts.each do |post| %>
+          <tr>
+            <td><%= post.title %></td>
+            <td><%= post.content %></td>
+            <td><%= post.gako %></td>
+            <td><%= User.find(post.user_id).name %></td>
+            <td>
+              <%= link_to 'Show', post, class: 'btn btn-default' %>
+              <% if current_user.id == post.user_id %>
+                <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-default' %>
+                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <h1>로그인 해주세요!</h1>
+  <% end %>
+  
 </div>
