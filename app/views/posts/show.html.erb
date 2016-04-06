@@ -40,7 +40,7 @@
 <hr>
 
 <%= render "comments/comments" %>
-<% if current_user.id == post.user_id %>
+<% if current_user.id == @post.user_id %>
   <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-default' %>
 <% end %>
 <%= link_to 'Back', posts_path, class: 'btn btn-default' %>
