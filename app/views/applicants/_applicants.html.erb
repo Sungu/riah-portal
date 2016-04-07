@@ -1,10 +1,10 @@
 <ul id="applicants_list_<%=@post.id%>">
 <% if @post.applicants.size > 0 %>
   <% @post.applicants.each do |a| %>
-    <%= User.find(a.user_id).name %>
+    <p class="white04"><%= User.find(a.user_id).name %></p>
   <% end %>
 <% else %>
-  <li>
+  <li class="white02" style="margin-bottom:30px">
     지원자가 없습니다.
   </li>
 <% end %>

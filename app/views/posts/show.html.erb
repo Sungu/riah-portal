@@ -1,43 +1,45 @@
 <%= render 'basic' %>
 <div class="container">
   
-    <h2>Post Preview</h2>
-      <p>
-      <strong>Title:</strong>
+    <h2 class="white" style="margin-top:80px; margin-bottom:65px;">Post Preview</h2>
+      <p class="white02">
+      <span class = "show_span">Title:</span>
       <%= @post.title %>
       </p>
-      <p>
-      <strong>Content:</strong>
+      <p class="white02">
+      <span class = "show_span">Content:</span>
       <%= @post.content %>
       </p>
-      <p>
-      <strong>Name:</strong>
+      <p class="white02">
+      <span class = "show_span">Name:</span>
       <%= User.find(@post.user_id).name %>
       </p>
-      <p>
-      <strong>이미지:</strong>
+      <p class="white02">
+      <span class = "show_span">이미지:</span>
       <img class="img-responsive" src="<%= @post.image_file.url %>" alt="">
       </p>
-      <p>
-      <strong>각오:</strong>
+      <p class="white02">
+      <span class = "show_span">각오:</span>
       <%= @post.gako %>
       </p>
-      <p>
-      <strong>모집기한:</strong>
+      <p class="white02">
+      <span class = "show_span">모집기한:</span>
       <%= @post.created_at + (@post.dday*86400) %>
       </p>
-      <p>
-      <strong>지원현황:</strong>
-      <%= render "applicants/applicants" %>
+      <p class="white02" style="margin-bottom:20px">
+      <span class = "show_span">지원현황:</span>
+      <%= render "applicants/applicants"%>
       </p>
-      <%= link_to '지원하기',{:controller => "applicants", :action => "create", :post => @post.id }, class: 'btn btn-default' %>
-      <hr>  
+      <%= link_to '지원하기',{:controller => "applicants", :action => "create", :post => @post.id }, class: 'action-button shadow animate yellow' %>
+      <hr class="hrcr" style="margin-top:105px; margin-bottom:40px;">  
+      
       <%= render "comments/comments" %>
+      
       <% if current_user.id == @post.user_id %>
-      <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-default' %>
+      <%= link_to 'Edit', edit_post_path(@post), class: 'action-button-sm shadow animate blue' %>
       <% end %>
-      <%= link_to 'Back', posts_path, class: 'btn btn-default' %>
-      <div style="margin-bottom:50px;">
+      <%= link_to 'Back', posts_path, class: 'action-button-sm shadow animate green' %>
+      <div style="margin-bottom:80px;">
     </div>
 
 </div>

@@ -4,15 +4,15 @@
   <div class="field-wrap">
     <label>
     </label>
-    <%= f.input :title,label: "프로젝트 제목" %>
+    <%= f.input :title, label: "프로젝트 제목", label_html: { class: 'white03'}  %>
   </div>
   <div class="field-wrap">
     <label>
     </label>
-  <%= f.input :content, input_html: { rows: 10 },label: "프로젝트 설명" %>
+  <%= f.input :content, input_html: { rows: 10 },label: "프로젝트 설명", label_html: { class: 'white03'}  %>
   </div>
   <div class="field-wrap">
-    <label>
+    <label class="white03">
       이미지
     </label>
   <%= f.file_field :image_file %>
@@ -20,12 +20,12 @@
   <div class="field-wrap">
     <label>
     </label>
-  <%= f.input :gako, input_html: { rows: 3 },label: "각오"%>
+  <%= f.input :gako, input_html: { rows: 3 },label: "각오", label_html: { class: 'white03'} %>
   </div>
   <div class="field-wrap">
     <label>
     </label>
-    <%= f.input :dday, collection: 1..14, prompt: "모집 기한을 정해주세요!", selected: 3,label: "모집기한" %>
+    <%= f.input :dday, collection: 1..14, prompt: "모집 기한을 정해주세요!", selected: 3,label: "모집기한", label_html: { class: 'white03'}  %>
   </div>
   <hr class="hrcr">
   <%= f.button :submit, "Post" %>
