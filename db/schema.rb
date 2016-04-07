@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160327085949) do
     t.string   "title"
     t.text     "content"
     t.text     "gako"
+    t.string   "image_file"
     t.integer  "dday"
     t.integer  "user_id"
     t.datetime "created_at", null: false

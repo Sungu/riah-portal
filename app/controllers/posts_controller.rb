@@ -21,6 +21,7 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     @post.gako = params[:gako]
     @post.dday = params[:dday]
+    @post.image_file = params[:image_file]
     @post.save
   end
 

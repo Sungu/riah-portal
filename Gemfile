@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'fog'
+gem 'carrierwave'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
