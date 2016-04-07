@@ -35,6 +35,7 @@ class PostsController < ApplicationController
     @post.user_id=current_user.id
     @post.gako = params[:gako]
     @post.dday = params[:dday]
+    @post.image_file = params[:image_file]
     @post.save
 
     respond_to do |format|
@@ -80,6 +81,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content,:gako,:dday)
+      params.require(:post).permit(:title, :content,:gako,:dday,:image_file)
     end
 end

@@ -25,7 +25,7 @@
           <%= link_to 'Show', post, class: 'action-button-sm shadow animate blue' %>
           <% if current_user.id == post.user_id %>
           <%= link_to 'Edit', edit_post_path(post), class: 'action-button-sm shadow animate red' %>   
-          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'action-button-sm shadow animate green' %>
+          <%= link_to 'Destroy', post, method: :delete, data: { confirm: '정말 지우시겠습니까?' }, class: 'action-button-sm shadow animate green' %>
           <% end %>
                 
       </div>

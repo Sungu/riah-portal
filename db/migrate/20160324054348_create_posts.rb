@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.text :content
       t.text :gako
+      t.string :image_file
       t.integer :dday
       t.references :user, index: true, foreign_key: true
 
