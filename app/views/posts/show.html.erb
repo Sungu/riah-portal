@@ -15,6 +15,10 @@
       <%= User.find(@post.user_id).name %>
       </p>
       <p>
+      <strong>이미지:</strong>
+      <img class="img-responsive" src="<%= @post.image_file.url %>" alt="">
+      </p>
+      <p>
       <strong>각오:</strong>
       <%= @post.gako %>
       </p>
