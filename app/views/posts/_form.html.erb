@@ -28,7 +28,7 @@
     <%= f.input :dday, collection: 1..14, prompt: "모집 기한을 정해주세요!", selected: 3,label: "모집기한", label_html: { class: 'white03'}  %>
   </div>
   <hr class="hrcr">
-  <%= f.button :submit, "Post" %>
+  <%= f.button :submit, "Post", input_html: { class: 'action-button-sm shadow animate red' }%>
   <%= link_to 'Back', posts_path, class: 'action-button-sm shadow animate green' %>
   <% end %>
 </div>  
