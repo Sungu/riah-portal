@@ -1,0 +1,965 @@
+/* line 5, /home/ubuntu/workspace/app/assets/stylesheets/comments.scss */
+.comments {
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  background-color: #ededed;
+  margin: 1em 0;
+  padding: 1em;
+}
+/* line 11, /home/ubuntu/workspace/app/assets/stylesheets/comments.scss */
+.comments h2 {
+  margin: 0 0 .5em;
+}
+/* line 14, /home/ubuntu/workspace/app/assets/stylesheets/comments.scss */
+.comments ul {
+  padding-left: 1.5em;
+}
+/* line 16, /home/ubuntu/workspace/app/assets/stylesheets/comments.scss */
+.comments ul li {
+  margin-bottom: 0.5em;
+}
+/* line 6, /home/ubuntu/workspace/app/assets/stylesheets/main.scss */
+#main_margin {
+  margin-top: 320px;
+}
+.static {
+  float: center;
+  position: relative; }
+
+.hello {
+  clear: center;
+  position: relative;
+  margin-top: 50px; }
+
+.post_main {
+  -webkit-transition-timing-function: ease-out;
+  /* Safari and Chrome */
+  transition-timing-function: ease-out;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.post_main {
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #F2F2F2;
+  background-color: #41558C; }
+
+.toggleNav {
+  border-bottom: 1px solid #666666;
+  background-color: #E74C3C;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 80px;
+  cursor: pointer;
+  color: white;
+  font-size: 30px; }
+
+.toggleNav:hover {
+  border-bottom: 1px solid #b3b3b3; }
+
+.post_main nav {
+  width: 100%;
+  min-height: 50px; }
+
+.toggleNavButton {
+  transition-duration: 0.5s;
+  width: 40px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  margin-left: -20px;
+  border-radius: 2px; }
+
+.toggleNavButton:before,
+.toggleNavButton:after {
+  border-radius: 2px;
+  transition-duration: 0.5s;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: white;
+  width: 40px;
+  height: 2px; }
+
+.toggleNavButton:after {
+  top: 20px; }
+
+.toggleNavButton.active {
+  width: 0; }
+
+.toggleNavButton.active:after {
+  top: 10px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg); }
+
+.toggleNavButton.active:before {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); }
+
+#subnav {
+  width: 100%;
+  border-bottom: 0px solid #e78383;
+  background-color: #fd8f8f;
+  transition-duration: 0.2s;
+  overflow: hidden;
+  height: 0px; }
+
+#subnav.active {
+  border-bottom: 0px solid #e78383;
+  height: 50px; }
+
+#subnav ul {
+  width: 615px;
+  margin: 0 auto; }
+
+#subnav ul li {
+  transition-duration: 0.3s;
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+  padding: 12px 0;
+  height: 50px; }
+
+#subnav ul li a {
+  color: white;
+  text-decoration: none; }
+
+#subnav ul li:hover {
+  background-color: #fd6565; }
+
+.login_main *, .login_main *:before, .login_main *:after {
+  box-sizing: border-box; }
+
+.login_main {
+  background: #c1bdba;
+  font-family: 'Titillium Web', sans-serif; }
+
+.login_main a {
+  text-decoration: none;
+  color: #1ab188;
+  -webkit-transition: .5s ease;
+  transition: .5s ease; }
+
+.login_main a:hover {
+  color: #179b77; }
+
+.login_main .form {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3); }
+
+.login_main .tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0; }
+
+.login_main .tab-group:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.login_main .tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease; }
+
+.login_main .tab-group li a:hover {
+  background: #179b77;
+  color: #ffffff; }
+
+.login_main .tab-group .active a {
+  background: #1ab188;
+  color: #ffffff; }
+
+.login_main .tab-content > div:last-child {
+  display: none; }
+
+.login_main h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px; }
+
+.login_main label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+  transform: translateY(6px);
+  left: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 22px; }
+
+.login_main label .req {
+  margin: 2px;
+  color: #1ab188; }
+
+.login_main label.active {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  left: 2px;
+  font-size: 14px; }
+
+.login_main label.active .req {
+  opacity: 0; }
+
+.login_main label.highlight {
+  color: #ffffff; }
+
+.login_main input, textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease; }
+
+.login_main input:focus, textarea:focus {
+  outline: 0;
+  border-color: #1ab188; }
+
+.login_main textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical; }
+
+.login_main .field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+  color: white; }
+
+.login_main .top-row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.login_main .top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%; }
+
+.login_main .top-row > div:last-child {
+  margin: 0; }
+
+.login_main .button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none; }
+
+.login_main .button:hover, .button:focus {
+  background: #179b77; }
+
+.login_main .button-block {
+  display: block;
+  width: 100%; }
+
+.login_main .forgot {
+  margin-top: -10px;
+  text-align: right; }
+
+.login_main .margin {
+  height: 16px; }
+
+.white {
+  color: #ffffff;
+  font-size: 50px; }
+
+.white01 {
+  color: #ffffff;
+  font-size: 40px; }
+
+.white02 {
+  color: #ffffff;
+  font-size: 30px;
+  margin-top: 30px; }
+
+.white03 {
+  color: #ffffa5;
+  font-size: 17px; }
+
+.white04 {
+  color: #ffffff;
+  font-size: 20px; }
+
+.show_span {
+  color: #ffffa5; }
+
+.hrcr {
+  color: #ffffff;
+  border: 0;
+  background-color: #ffffff;
+  height: 2px; }
+
+.animate {
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s; }
+
+.action-button {
+  text-decoration: none;
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-size: 25px;
+  color: #FFF; }
+
+.action-button-sm {
+  text-decoration: none;
+  position: relative;
+  padding: 7px 30px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 7px;
+  font-size: 18px;
+  color: #FFF; }
+
+.blue {
+  background-color: #3498DB;
+  border-bottom: 5px solid #2980B9;
+  text-shadow: 0px -2px #2980B9; }
+
+.red {
+  background-color: #E74C3C;
+  border-bottom: 5px solid #BD3E31;
+  text-shadow: 0px -2px #BD3E31; }
+
+.green {
+  background-color: #82BF56;
+  border-bottom: 5px solid #669644;
+  text-shadow: 0px -2px #669644; }
+
+.yellow {
+  background-color: #F2CF66;
+  border-bottom: 5px solid #D1B358;
+  text-shadow: 0px -2px #D1B358; }
+
+.action-button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  border-bottom: 1px solid; }
+
+/*# sourceMappingURL=posts.css.map */
+/* line 1, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.static {
+  float: center;
+  position: relative;
+}
+
+/* line 5, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.hello {
+  clear: center;
+  position: relative;
+  margin-top: 50px;
+}
+
+/* line 14, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.post_main {
+  -webkit-transition-timing-function: ease-out;
+  /* Safari and Chrome */
+  transition-timing-function: ease-out;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 27, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.post_main {
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #F2F2F2;
+  background-color: #41558C;
+}
+
+/* line 33, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.toggleNav {
+  border-bottom: 1px solid #d5d5d5;
+  background-color: #e2e2e2;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 80px;
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+}
+
+/* line 44, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.toggleNav:hover {
+  border-bottom: 1px solid #b3b3b3;
+}
+
+/* line 47, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.post_main nav {
+  width: 100%;
+  min-height: 50px;
+}
+
+/* line 51, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.toggleNavButton {
+  transition-duration: 0.5s;
+  width: 40px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  margin-left: -20px;
+  border-radius: 2px;
+}
+
+/* line 62, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.toggleNavButton:before,
+.toggleNavButton:after {
+  border-radius: 2px;
+  transition-duration: 0.5s;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: white;
+  width: 40px;
+  height: 2px;
+}
+
+/* line 74, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.toggleNavButton:after {
+  top: 20px;
+}
+
+/* line 77, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.toggleNavButton.active {
+  width: 0;
+}
+
+/* line 80, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.toggleNavButton.active:after {
+  top: 10px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* line 85, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.toggleNavButton.active:before {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+/* line 89, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+#subnav {
+  width: 100%;
+  border-bottom: 0px solid #e78383;
+  background-color: #fd8f8f;
+  transition-duration: 0.2s;
+  overflow: hidden;
+  height: 0px;
+}
+
+/* line 97, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+#subnav.active {
+  border-bottom: 0px solid #e78383;
+  height: 50px;
+}
+
+/* line 101, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+#subnav ul {
+  width: 615px;
+  margin: 0 auto;
+}
+
+/* line 105, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+#subnav ul li {
+  transition-duration: 0.3s;
+  display: inline-block;
+  text-align: center;
+  width: 150px;
+  padding: 12px 0;
+  height: 50px;
+}
+
+/* line 113, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+#subnav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 117, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+#subnav ul li:hover {
+  background-color: #fd6565;
+}
+
+/* line 125, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main *, .login_main *:before, .login_main *:after {
+  box-sizing: border-box;
+}
+
+/* line 133, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main {
+  background: #c1bdba;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* line 138, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main a {
+  text-decoration: none;
+  color: #1ab188;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+/* line 144, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main a:hover {
+  color: #179b77;
+}
+
+/* line 148, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .form {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+/* line 157, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+/* line 162, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 167, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+/* line 181, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .tab-group li a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+
+/* line 185, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .tab-group .active a {
+  background: #1ab188;
+  color: #ffffff;
+}
+
+/* line 190, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .tab-content > div:last-child {
+  display: none;
+}
+
+/* line 194, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+
+/* line 201, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+  transform: translateY(6px);
+  left: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 22px;
+}
+
+/* line 213, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main label .req {
+  margin: 2px;
+  color: #1ab188;
+}
+
+/* line 218, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main label.active {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+
+/* line 224, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main label.active .req {
+  opacity: 0;
+}
+
+/* line 228, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main label.highlight {
+  color: #ffffff;
+}
+
+/* line 232, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main input, textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+/* line 246, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main input:focus, textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+
+/* line 251, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+
+/* line 256, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+  color: white;
+}
+
+/* line 262, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 267, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+
+/* line 272, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .top-row > div:last-child {
+  margin: 0;
+}
+
+/* line 276, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+
+/* line 291, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .button:hover, .button:focus {
+  background: #179b77;
+}
+
+/* line 295, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .button-block {
+  display: block;
+  width: 100%;
+}
+
+/* line 300, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .forgot {
+  margin-top: -10px;
+  text-align: right;
+}
+
+/* line 305, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.login_main .margin {
+  height: 16px;
+}
+
+/* line 309, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.white {
+  color: #ffffff;
+  font-size: 50px;
+}
+
+/* line 314, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.white01 {
+  color: #ffffff;
+  font-size: 40px;
+}
+
+/* line 318, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.white02 {
+  color: #ffffff;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+/* line 323, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.white03 {
+  color: #ffffa5;
+  font-size: 17px;
+}
+
+/* line 327, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.white04 {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* line 331, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.show_span {
+  color: #ffffa5;
+}
+
+/* line 335, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.hrcr {
+  color: #ffffff;
+  border: 0;
+  background-color: #ffffff;
+  height: 2px;
+}
+
+/* line 344, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.animate {
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+/* line 350, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.action-button {
+  text-decoration: none;
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-size: 25px;
+  color: #FFF;
+}
+
+/* line 361, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.action-button-sm {
+  text-decoration: none;
+  position: relative;
+  padding: 7px 30px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 7px;
+  font-size: 18px;
+  color: #FFF;
+}
+
+/* line 373, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.blue {
+  background-color: #3498DB;
+  border-bottom: 5px solid #2980B9;
+  text-shadow: 0px -2px #2980B9;
+}
+
+/* line 380, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.red {
+  background-color: #E74C3C;
+  border-bottom: 5px solid #BD3E31;
+  text-shadow: 0px -2px #BD3E31;
+}
+
+/* line 387, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.green {
+  background-color: #82BF56;
+  border-bottom: 5px solid #669644;
+  text-shadow: 0px -2px #669644;
+}
+
+/* line 394, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.yellow {
+  background-color: #F2CF66;
+  border-bottom: 5px solid #D1B358;
+  text-shadow: 0px -2px #D1B358;
+}
+
+/* line 401, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.action-button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  border-bottom: 1px solid;
+}
+
+/* line 408, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.text01 {
+  color: white;
+  font-size: 20px;
+}
+
+/* line 413, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.text02 {
+  color: white;
+  font-size: 15px;
+}
+
+/* line 418, /home/ubuntu/workspace/app/assets/stylesheets/posts.scss */
+.text03 {
+  color: white;
+  font-size: 15px;
+}
+/* body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+} */
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ 
+ */
+
+
+@import 'bootstrap';
+
