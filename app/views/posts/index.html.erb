@@ -10,7 +10,7 @@
     </div>
     <hr class="hrcr">
     <div id="posting">
-    <% @posts.each do |post| %>
+    <% @posts.reverse.each do |post| %>
       <div class="row">
         <div class="col-md-7">
           <a href="#">
@@ -23,7 +23,7 @@
         <p style="color:white;font-size:20px;"><%= post.content %></p>      
          
           <%= link_to 'Show', post, class: 'action-button-sm shadow animate blue' %>
-          <% if current_user.id == post.user_id %>
+          <% if current_user.id == post.user_id  or current_user.id == 1 %>
           <%= link_to 'Edit', edit_post_path(post), class: 'action-button-sm shadow animate red' %>   
           <%= link_to 'Destroy', post, method: :delete, data: { confirm: '정말 지우시겠습니까?' }, class: 'action-button-sm shadow animate green' %>
           <% end %>
