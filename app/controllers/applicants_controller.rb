@@ -4,12 +4,15 @@ class ApplicantsController < ApplicationController
   def create
     @post = Post.find(params[:post])
     if @post.applicants.where(user_id: current_user.id).exists?
-      flash[:notice] = "이미 지원 신청 되었습니다!"
+      a = @post.applicants.where(user_id: current_user.id)[0]
+      a.destroy
+      flash[:notice] = "지원 신청이 취소 되었습니다!"
       redirect_to :back
     else
       applicant = @post.applicants.new 
       applicant.user_id = current_user.id
       applicant.save
+      flash[:notice] = "지원 신청 되었습니다!"
       redirect_to :back
     end
   end

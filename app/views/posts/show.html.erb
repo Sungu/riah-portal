@@ -1,7 +1,7 @@
 <%= render 'basic' %>
 <div class="container">
   
-    <h2 class="white" style="margin-top:80px; margin-bottom:65px;">Post Preview</h2>
+    <h2 class="white text-center" style="margin-top:80px; margin-bottom:65px;">Post Preview</h2>
       <p class="white02">
       <span class = "show_span">Title:</span>
       <%= @post.title %>
@@ -30,7 +30,11 @@
       <span class = "show_span">지원현황:</span>
       <%= render "applicants/applicants"%>
       </p>
-      <%= link_to '지원하기',{:controller => "applicants", :action => "create", :post => @post.id }, class: 'action-button shadow animate yellow' %>
+      <% if @post.applicants.where(user_id: current_user.id)==[] %>
+        <%= link_to '지원 하기',{:controller => "applicants", :action => "create", :post => @post.id }, class: 'action-button shadow animate yellow' %>
+      <% else %>
+        <%= link_to '지원 취소',{:controller => "applicants", :action => "create", :post => @post.id }, class: 'action-button shadow animate yellow' %>
+      <% end %>
       <hr class="hrcr" style="margin-top:105px; margin-bottom:40px;">  
       
       <%= render "comments/comments" %>

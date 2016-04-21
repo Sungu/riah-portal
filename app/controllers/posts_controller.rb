@@ -18,11 +18,6 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
-    @post.user_id = current_user.id
-    @post.gako = params[:gako]
-    @post.dday = params[:dday]
-    @post.image_file = params[:image_file]
-    @post.save
   end
 
   # GET /posts/1/editqu
@@ -34,9 +29,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id=current_user.id
-    @post.gako = params[:gako]
-    @post.dday = params[:dday]
-    @post.image_file = params[:image_file]
     @post.save
 
     respond_to do |format|
