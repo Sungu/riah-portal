@@ -8,7 +8,7 @@
       </p>
       <p class="white02">
       <span class = "show_span">Content:</span>
-      <%= @post.content %>
+      <%= simple_format(@post.content) %>
       </p>
       <p class="white02">
       <span class = "show_span">Name:</span>
@@ -20,7 +20,7 @@
       </p>
       <p class="white02">
       <span class = "show_span">각오:</span>
-      <%= @post.gako %>
+      <%= simple_format(@post.gako) %>
       </p>
       <p class="white02">
       <span class = "show_span">모집기한:</span>
